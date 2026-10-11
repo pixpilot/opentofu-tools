@@ -1,13 +1,24 @@
 {
-  "name": "pnpm-turbo-monorepo-template",
+  "name": "opentofu-tools",
+  "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.34.6",
+  "prettier": "@internal/prettier-config",
+  "author": "Mo Doaie <m.doaie@hotmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/pixpilot/opentofu-tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pixpilot/opentofu-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pixpilot/opentofu-tools/issues"
+  },
   "engines": {
     "node": ">=24.15.0",
     "pnpm": ">=9.6.0"
   },
   "scripts": {
-    "setup": "npx @pixpilot/scaffoldfy@latest --config ./setup/scaffoldfy.json",
     "prepare": "husky",
     "preinstall": "npx only-allow pnpm",
     "build": "turbo run build",
@@ -20,7 +31,7 @@
     "lint:root:fix": "pnpm lint:root --fix",
     "lint:ws": "pnpm dlx sherif@latest",
     "fix:all": "pnpm format:fix && pnpm lint:fix && pnpm typecheck",
-    "postinstall": "pnpm lint:ws && node setup/guard.mjs warn",
+    "postinstall": "pnpm lint:ws",
     "test": "turbo run test",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage --config tooling/vitest/index.js",
@@ -30,7 +41,8 @@
     "deps:update": "npx taze -r -w && pnpm install",
     "deps:update:major": "npx taze major -r -w && pnpm install",
     "gen:package": "npx @pixpilot/scaffoldfy@latest --config ./generators/package/scaffoldfy.jsonc",
-    "changeset": "changeset"
+    "changeset": "changeset",
+    "generate-packages-section": "node scripts/generate-packages-section.js"
   },
   "devDependencies": {
     "@changesets/cli": "catalog:tooling",
@@ -52,6 +64,5 @@
     "turbo": "catalog:tooling",
     "typescript": "catalog:tooling",
     "vitest": "catalog:testing"
-  },
-  "prettier": "@internal/prettier-config"
+  }
 }
