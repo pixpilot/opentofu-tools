@@ -27,7 +27,7 @@ catalogs:
 
   pixpilot:
     '@pixpilot/dev-config': ^3.22.1
-    '@pixpilot/eslint-config': ^3.0.0
+    '@pixpilot/eslint-config': ^3.1.0
     '@pixpilot/tsdown-config': ^0.8.3
     '@pixpilot/workspace-package-generator': ^2.1.2
 

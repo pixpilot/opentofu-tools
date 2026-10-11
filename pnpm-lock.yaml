@@ -10,8 +10,8 @@ catalogs:
       specifier: ^3.22.1
       version: 3.22.1
     '@pixpilot/eslint-config':
-      specifier: ^3.0.0
-      version: 3.0.0
+      specifier: ^3.1.0
+      version: 3.1.0
     '@pixpilot/tsdown-config':
       specifier: ^0.8.3
       version: 0.8.3
@@ -181,7 +181,7 @@ importers:
     dependencies:
       '@pixpilot/eslint-config':
         specifier: catalog:pixpilot
-        version: 3.0.0(@next/eslint-plugin-next@15.4.3)(@typescript-eslint/typescript-estree@8.70.0(typescript@6.0.3))(@typescript-eslint/utils@8.70.0(eslint@10.11.0(jiti@2.6.1))(typescript@6.0.3))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.11.0(jiti@2.6.1)))(eslint-plugin-turbo@2.5.6(eslint@10.11.0(jiti@2.6.1))(turbo@2.11.5))(eslint@10.11.0(jiti@2.6.1))(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)(vitest@5.0.3)
+        version: 3.1.0(@next/eslint-plugin-next@15.4.3)(@typescript-eslint/typescript-estree@8.70.0(typescript@6.0.3))(@typescript-eslint/utils@8.70.0(eslint@10.11.0(jiti@2.6.1))(typescript@6.0.3))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.11.0(jiti@2.6.1)))(eslint-plugin-turbo@2.5.6(eslint@10.11.0(jiti@2.6.1))(turbo@2.11.5))(eslint@10.11.0(jiti@2.6.1))(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)(vitest@5.0.3)
     devDependencies:
       '@internal/prettier-config':
         specifier: workspace:*
@@ -1046,8 +1046,8 @@ packages:
     peerDependencies:
       eslint: ^9.10.0 || ^10.0.0
 
-  '@pixpilot/eslint-config@3.0.0':
-    resolution: {integrity: sha512-NgYwmBoqoZtwWoerbXGG6ZGuu43Cckn+GN9rkp0NGmGqFdmklInUTOab4WDZ8HLMOiNoqK5FotJXCdiDM3YZEw==}
+  '@pixpilot/eslint-config@3.1.0':
+    resolution: {integrity: sha512-4hXhRTUg51pWRNoKV4A2GzRv6tG5iKN6nefnuYaSelm7lOlydKVFpTbKgrAe86w+wHJHqhBI47EbIBRBAuMbCw==}
     peerDependencies:
       eslint: ^9.10.0 || ^10.0.0
       eslint-plugin-turbo: ^2.5.5
@@ -4523,7 +4523,7 @@ snapshots:
     dependencies:
       eslint: 10.11.0(jiti@2.6.1)
 
-  '@pixpilot/eslint-config@3.0.0(@next/eslint-plugin-next@15.4.3)(@typescript-eslint/typescript-estree@8.70.0(typescript@6.0.3))(@typescript-eslint/utils@8.70.0(eslint@10.11.0(jiti@2.6.1))(typescript@6.0.3))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.11.0(jiti@2.6.1)))(eslint-plugin-turbo@2.5.6(eslint@10.11.0(jiti@2.6.1))(turbo@2.11.5))(eslint@10.11.0(jiti@2.6.1))(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)(vitest@5.0.3)':
+  '@pixpilot/eslint-config@3.1.0(@next/eslint-plugin-next@15.4.3)(@typescript-eslint/typescript-estree@8.70.0(typescript@6.0.3))(@typescript-eslint/utils@8.70.0(eslint@10.11.0(jiti@2.6.1))(typescript@6.0.3))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.11.0(jiti@2.6.1)))(eslint-plugin-turbo@2.5.6(eslint@10.11.0(jiti@2.6.1))(turbo@2.11.5))(eslint@10.11.0(jiti@2.6.1))(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)(vitest@5.0.3)':
     dependencies:
       '@fastify/deepmerge': 3.2.1
       '@pixpilot/antfu-eslint-config': 5.0.0(@next/eslint-plugin-next@15.4.3)(@typescript-eslint/typescript-estree@8.70.0(typescript@6.0.3))(@typescript-eslint/utils@8.70.0(eslint@10.11.0(jiti@2.6.1))(typescript@6.0.3))(eslint-plugin-jsx-a11y@6.10.2(eslint@10.11.0(jiti@2.6.1)))(eslint@10.11.0(jiti@2.6.1))(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)(vitest@5.0.3)
