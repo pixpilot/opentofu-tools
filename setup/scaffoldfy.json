@@ -1,0 +1,44 @@
+{
+  "$schema": "https://unpkg.com/@pixpilot/scaffoldfy@latest/schema/scaffoldfy.schema.json",
+  "extends": [
+    "https://unpkg.com/@pixpilot/scaffoldfy-configs@latest/setup-guard/scaffoldfy.json",
+    "https://unpkg.com/@pixpilot/scaffoldfy-configs@latest/workspace-initializer/scaffoldfy.json"
+  ],
+  "name": "pnpm-turbo-monorepo-template-setup-local",
+  "description": "Runs the shared setup-guard strip, then the shared workspace-initializer, and finally deletes the local setup/ folder.",
+  "tasks": [
+    {
+      "id": "remove-setup-script",
+      "name": "Remove setup script (handled locally)",
+      "description": "Disabled: the shared task targets the old inline unpkg command and can no longer match. scripts.setup is removed JSON-side by the shared setup-guard config. The config below is a never-matching no-op, present only because the schema requires it.",
+      "type": "regex-replace",
+      "enabled": false,
+      "override": "merge",
+      "config": {
+        "file": "package.json",
+        "pattern": "(?!)",
+        "replacement": ""
+      }
+    },
+    {
+      "id": "remove-pre-commit-setup-guard",
+      "name": "Remove pre-commit setup guard",
+      "description": "Remove the one-time setup guard from Husky after workspace initialization completes",
+      "type": "regex-replace",
+      "config": {
+        "file": ".husky/pre-commit",
+        "pattern": "\\n# Block commits until the one-time workspace initializer has been run\\.\\nnode setup/guard\\.mjs block \\|\\| exit 1\\n",
+        "replacement": ""
+      }
+    },
+    {
+      "id": "delete-setup-folder",
+      "name": "Delete setup folder",
+      "description": "Remove the guard and this config now that setup-guard has stripped every reference to them",
+      "type": "delete",
+      "config": {
+        "paths": ["setup"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Your Organization Releaser",
+  "url": "https://github.com/your-org",
+  "description": "Internal bot to handle automatic releases of packages.",
+  "public": false,
+  "default_permissions": {
+    "checks": "write",
+    "contents": "write",
+    "issues": "write",
+    "pull_requests": "write",
+    "metadata": "read"
+  }
+}
