@@ -35,7 +35,10 @@ pnpm run gen:package
 
 ## 📦 Packages
 
-<!-- List your packages here -->
+### [tofu-check](./packages/tofu-check/README.md)
+
+Run OpenTofu format, validation, and TFLint checks from the command line.
+
 
 ## 🚢 Releases
 
